@@ -264,6 +264,31 @@
         <script src="assets/js/main.js"></script>
         <script src="komentar.js"></script>
 
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                document.getElementById('postKomentar').addEventListener('submit', function (event) {
+                    event.preventDefault(); // Mencegah pengiriman form asli untuk tujuan demo
+
+                    // Menampilkan pesan loading
+                    document.querySelector('.loading').style.display = 'block';
+
+                    // Simulasi proses pengiriman form
+                    setTimeout(function () {
+                        // Sembunyikan pesan loading
+                        document.querySelector('.loading').style.display = 'none';
+
+                        // Tampilkan pesan sukses
+                        document.querySelector('.sent-message').style.display = 'block';
+
+                        // Sembunyikan pesan sukses setelah beberapa detik
+                        setTimeout(function () {
+                            document.querySelector('.sent-message').style.display = 'none';
+                        }, 3000); // 3000 ms = 3 detik
+
+                    }, 2000); // Simulasi penundaan 2 detik
+                });
+            });
+        </script>
     </body>
 
 </html>

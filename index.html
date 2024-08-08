@@ -42,6 +42,23 @@
         <!-- Main CSS File -->
         <link href="assets/css/main.css" rel="stylesheet">
 
+        <script>
+            function createWhatsAppLink(number, message) {
+                const encodedMessage = encodeURIComponent(message);
+                return `https://wa.me/${number}?text=${encodedMessage}`;
+            }
+
+            document.addEventListener('DOMContentLoaded', (event) => {
+                const number = '6282232725312';
+                const message = 'Halo! Saya tertarik dengan produk Anda.';
+                const links = document.querySelectorAll('#wa-link');
+
+                links.forEach(link => {
+                    link.href = createWhatsAppLink(number, message);
+                });
+            });
+        </script>
+
     </head>
 
     <body class="index-page">
@@ -181,7 +198,7 @@
                                         <div class="error-message" style="display: none;">Tambah Data Gagal</div>
                                         <div class="sent-message" style="display: none;">Anda Sukses Bergabung Dengan
                                             Kami</div>
-                                        <button type="submit" name="submit">Simpan</button>
+                                        <button type="submit" name="submit" id="submit">Simpan</button>
                                     </div>
 
 
@@ -360,6 +377,94 @@
                 </div>
 
             </section><!-- /Alt Services Section -->
+
+            <!-- Features Cards Section -->
+            <section id="features-cards" class="features-cards section">
+
+                <!-- Section Title -->
+                <div class="container section-title" data-aos="fade-up">
+                    <h2>Produk Kami</h2>
+                    <p>Produk Terbaik untuk Kebutuhan Anda</p>
+                </div><!-- End Section Title -->
+
+                <div class="container">
+
+                    <div class="row gy-4">
+
+                        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                            <img src="assets/Foto/IMG_0662.JPG" class="img-thumbnail border-0 mb-3" alt="Trailer"
+                                srcset="">
+                            <h3>Trailer</h3>
+                            <p>Solusi ideal untuk mengangkut beban berat dengan efisiensi dan keamanan. Dirancang untuk
+                                berbagai kebutuhan
+                                transportasi industri.</p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="bi bi-check2"></i> <span>Kapasitas muatan besar</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Struktur kuat dan tahan lama</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Dapat diandalkan dalam berbagai kondisi</span>
+                                </li>
+                            </ul>
+
+                            <a id="wa-link" href="#" target="_blank" class="btn-get-features">Hubungi Sekarang</a>
+                        </div><!-- End feature item-->
+
+
+                        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                            <img src="assets/Foto/IMG_0663.jpg" class="img-thumbnail border-0 mb-3" alt="Tangki"
+                                srcset="">
+                            <h3>Tangki</h3>
+                            <p>Dirancang untuk menyimpan dan mengangkut berbagai jenis cairan dengan aman. Solusi tepat
+                                untuk kebutuhan
+                                penyimpanan industri Anda.</p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="bi bi-check2"></i> <span>Material berkualitas tinggi</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Sistem keamanan terjamin</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Beragam kapasitas tersedia</span></li>
+
+                                <a id="wa-link" href="#" target="_blank" class="btn-get-features">Hubungi Sekarang</a>
+                            </ul>
+                        </div><!-- End feature item-->
+
+
+                        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                            <img src="assets/Foto/IMG_1419.JPG" class="img-thumbnail border-0 mb-3" alt="Dump"
+                                srcset="">
+                            <h3>Dump</h3>
+                            <p>Sempurna untuk mengangkut material konstruksi dengan efisien. Desain yang kokoh dan tahan
+                                lama untuk pekerjaan
+                                berat Anda.</p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="bi bi-check2"></i> <span>Mudah digunakan dan dipelihara</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Kapasitas besar untuk material berat</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Struktur yang tahan lama</span></li>
+
+                                <a id="wa-link" href="#" target="_blank" class="btn-get-features">Hubungi Sekarang</a>
+                            </ul>
+                        </div><!-- End feature item-->
+
+
+                        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                            <img src="assets/Foto/IMG_2908.JPG" class="img-thumbnail border-0 mb-3" alt="Self Loader"
+                                srcset="">
+                            <h3>Self Loader</h3>
+                            <p>Mudah mengangkut dan memuat alat berat dengan desain yang efisien dan kuat. Solusi
+                                terbaik untuk kebutuhan
+                                transportasi alat berat Anda.</p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="bi bi-check2"></i> <span>Desain praktis dan efisien</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Tahan lama dan kuat</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Mempermudah pemuatan alat berat</span></li>
+
+                                <a id="wa-link" href="#" target="_blank" class="btn-get-features">Hubungi Sekarang</a>
+                            </ul>
+                        </div><!-- End feature item-->
+
+
+                    </div>
+
+                </div>
+
+            </section><!-- /Features Cards Section -->
 
             <!-- Features Section -->
             <section id="features" class="features section">
@@ -1330,6 +1435,32 @@
         <script src="assets/js/main.js"></script>
 
         <script src="script.js"></script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                document.getElementById('postAnggota').addEventListener('submit', function (event) {
+                    event.preventDefault(); // Mencegah pengiriman form asli untuk tujuan demo
+
+                    // Menampilkan pesan loading
+                    document.querySelector('.loading').style.display = 'block';
+
+                    // Simulasi proses pengiriman form
+                    setTimeout(function () {
+                        // Sembunyikan pesan loading
+                        document.querySelector('.loading').style.display = 'none';
+
+                        // Tampilkan pesan sukses
+                        document.querySelector('.sent-message').style.display = 'block';
+
+                        // Sembunyikan pesan sukses setelah beberapa detik
+                        setTimeout(function () {
+                            document.querySelector('.sent-message').style.display = 'none';
+                        }, 3000); // 3000 ms = 3 detik
+
+                    }, 2000); // Simulasi penundaan 2 detik
+                });
+            });
+        </script>
     </body>
 
 </html>

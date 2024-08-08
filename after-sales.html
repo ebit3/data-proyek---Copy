@@ -73,7 +73,7 @@
         <main class="main">
 
             <!-- Page Title -->
-            <div class="page-title dark-background" style="background-image: url(assets/img/page-title-bg.jpg);">
+            <div class="page-title dark-background" style="background-image: url(assets/Foto/IMG_1486.JPG);">
                 <div class="container position-relative">
                     <h1>Pengajuan</h1>
                     <nav class="breadcrumbs">
@@ -238,15 +238,15 @@
                             <p>JL. RAYA JABON NO 6</p>
                             <p>JOKODAYO JABON KEC, MOJOANYAR, MOJOKERTO JAWATIMUR</p>
                             <p class="mt-3"><strong>Phone:</strong> <span>0812-2222-8543</span></p>
-                            <p><strong>Email:</strong> <span>mandirikerjaabadi@gmal.com</span></p>
+                            <p><strong>Email:</strong> <span>mandirikerjaabadi@gmail.com</span></p>
                         </div>
                         <div class="social-links d-flex mt-4">
-                            <a href="https://www.tiktok.com/@karoseri_mka?_t=8oXG6z4FaFt&_r=1"><i
+                            <a href="https://www.tiktok.com/@karoseri_mka?_t=8oXG6z4FaFt&_r=1" class="me-2"><i
                                     class="bi bi-tiktok"></i></a>
-                            <a href="https://www.facebook.com/profile.php?id=100072235188741&mibextid=ZbWKwL"><i
-                                    class="bi bi-facebook"></i></a>
-                            <a href="https://www.instagram.com/karoserimandirikerjaabadi?igsh=MXJ5cTc4bDhvbjJjbQ=="><i
-                                    class="bi bi-instagram"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=100072235188741&mibextid=ZbWKwL"
+                                class="me-2"><i class="bi bi-facebook"></i></a>
+                            <a href="https://www.instagram.com/karoserimandirikerjaabadi?igsh=MXJ5cTc4bDhvbjJjbQ=="
+                                class="me-2"><i class="bi bi-instagram"></i></a>
                         </div>
                     </div>
 
@@ -263,12 +263,31 @@
                         </ul>
                     </div>
 
+                    <div class="col-lg-3 col-md-6 footer-newsletter">
+                        <h4>Newsletter</h4>
+                        <p>Berlangganan newsletter kami untuk mendapatkan update terbaru tentang layanan dan proyek
+                            kami.</p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-hours">
+                        <h4>Jam Operasional</h4>
+                        <p>
+                            <strong>Senin - Jumat:</strong> 08:00 - 17:00<br>
+                            <strong>Sabtu:</strong> 08:00 - 14:00<br>
+                            <strong>Minggu:</strong> Tutup
+                        </p>
+                    </div>
                 </div>
             </div>
 
-            <div class="container copyright text-center mt-4">
-                <p>© <span>Copyright</span> <strong class="px-1 sitename">Mandiri Kerja Abadi</strong> <span>All Rights
-                        Reserved</span></p>
+            <div class="container text-center mt-4">
+                <div class="row">
+                    <div class="col">
+                        <p>© <span>Copyright</span> <strong class="px-1 sitename">Mandiri Kerja Abadi</strong> <span>All
+                                Rights
+                                Reserved</span></p>
+                    </div>
+                </div>
             </div>
 
         </footer>
@@ -293,6 +312,31 @@
         <script src="assets/js/main.js"></script>
         <script src="pengajuan.js"></script>
 
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                document.getElementById('postPengajuan').addEventListener('submit', function (event) {
+                    event.preventDefault(); // Mencegah pengiriman form asli untuk tujuan demo
+
+                    // Menampilkan pesan loading
+                    document.querySelector('.loading').style.display = 'block';
+
+                    // Simulasi proses pengiriman form
+                    setTimeout(function () {
+                        // Sembunyikan pesan loading
+                        document.querySelector('.loading').style.display = 'none';
+
+                        // Tampilkan pesan sukses
+                        document.querySelector('.sent-message').style.display = 'block';
+
+                        // Sembunyikan pesan sukses setelah beberapa detik
+                        setTimeout(function () {
+                            document.querySelector('.sent-message').style.display = 'none';
+                        }, 3000); // 3000 ms = 3 detik
+
+                    }, 2000); // Simulasi penundaan 2 detik
+                });
+            });
+        </script>
     </body>
 
 </html>
