@@ -33,7 +33,7 @@ document.getElementById('postPengajuan').addEventListener('submit', function (e)
 	data.append('persetujuan', persetujuan);
 
 	const scriptURL =
-		'https://script.google.com/macros/s/AKfycbwCimOW_q1Ts2XPdDVcXoc1ljS8vdZUiG9oKjBsJk5nHXTpvl02DoMEAiBiJq02lbIn/exec';
+		'https://script.google.com/macros/s/AKfycbwwyKlS2bVWS8jB-2QcWeUXOc1nL-dnFa_mMY5QUGFLsk1_UxMQgiQap5pVQm7HMAu4/exec';
 
 	// Tampilkan pesan loading
 	document.querySelector('.loading').style.display = 'block';
