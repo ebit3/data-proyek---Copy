@@ -21,8 +21,7 @@
             content="CV. Mandiri Kerja Abadi menyediakan solusi kendaraan niaga berkualitas tinggi, didukung oleh pengalaman lebih dari 10 tahun dan komitmen pada kepuasan pelanggan.">
 
         <!-- Favicons -->
-        <link href="assets/logo/Screenshot_2024-08-02_193845-removebg.png" rel="icon">
-        <link href="assets/logo/Screenshot_2024-08-02_193845-removebg.png" rel="apple-touch-icon">
+        <link href="assets/logo/fav2.png" rel="icon">
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -42,6 +41,24 @@
         <!-- Main CSS File -->
         <link href="assets/css/main.css" rel="stylesheet">
 
+        <script>
+            function createWhatsAppLink(number, message) {
+                const encodedMessage = encodeURIComponent(message);
+                return `https://wa.me/${number}?text=${encodedMessage}`;
+            }
+
+            document.addEventListener('DOMContentLoaded', (event) => {
+                const number = '6281222228543';
+                const message = 'Halo! Saya tertarik dengan produk Anda.';
+                const links = document.querySelectorAll('#wa-link');
+
+                links.forEach(link => {
+                    link.href = createWhatsAppLink(number, message);
+                });
+            });
+        </script>
+
+
     </head>
 
     <body class="index-page">
@@ -51,7 +68,7 @@
                 class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
                 <a href="index.html" class="logo d-flex align-items-center">
-                    <img src="assets/logo/Screenshot_2024-08-02_193845-removebg.png" alt="">
+                    <img src="assets/logo/MKA-LOGO-01.png" alt="logo cv">
                 </a>
 
                 <nav id="navmenu" class="navmenu">
@@ -59,10 +76,11 @@
                         <li><a href="index.html">Beranda</a></li>
                         <li><a href="about.html">Tentang Kami</a></li>
                         <li><a href="services.html">Layanan</a></li>
-                        <li><a href="projects.html" class="active">Proyek</a></li>
+                        <li><a href="projects.html" class="active">Produk</a></li>
                         <li><a href="blog.html">Artikel</a></li>
+                        <li><a href="galeri.html">Galeri</a></li>
                         <li><a href="contact.html">Kontak</a></li>
-                        <li><a href="after-sales.html">Pengajuan</a></li>
+                        <li><a href="after-sales.html">Purna Jual</a></li>
                     </ul>
                     <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
                 </nav>
@@ -73,236 +91,235 @@
         <main class="main">
 
             <!-- Page Title -->
-            <div class="page-title dark-background" style="background-image: url(assets/Foto/IMG_1510.JPG);">
+            <div class="page-title dark-background" style="background-image: url(assets/tambahan/MKA-TRUCKBOX.png);">
                 <div class="container position-relative">
-                    <h1>Proyek</h1>
+                    <h1>Produk</h1>
                     <nav class="breadcrumbs">
                         <ol>
                             <li><a href="index.html">Beranda</a></li>
-                            <li class="current">Proyek</li>
+                            <li class="current">Produk</li>
                         </ol>
                     </nav>
                 </div>
             </div><!-- End Page Title -->
 
-            <!-- Projects Section -->
-            <section id="projects" class="projects section">
+            <!-- Features Cards Section -->
+            <section id="features-cards" class="features-cards section">
+
+                <!-- Section Title -->
+                <div class="container section-title" data-aos="fade-up">
+                    <h2>Produk Kami</h2>
+                    <p>Produk Terbaik untuk Kebutuhan Anda</p>
+                </div><!-- End Section Title -->
 
                 <div class="container">
 
-                    <div class="isotope-layout" data-default-filter="*" data-layout="masonry"
-                        data-sort="original-order">
+                    <div class="row gy-4">
 
-                        <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-                            <li data-filter="*" class="filter-active">All</li>
-                            <li data-filter=".filter-dump">Dump Truck</li>
-                            <li data-filter=".filter-tanki">Tanki</li>
-                            <li data-filter=".filter-crane">Crane</li>
-                            <li data-filter=".filter-wing">Wing Box</li>
-                            <li data-filter=".filter-box">Box Container</li>
-                            <li data-filter=".filter-traieler">Traieler</li>
-                            <li data-filter=".filter-self-loader">Self Loader</li>
-                            <li data-filter=".filter-low-bed">Low Bed</li>
-                            <li data-filter=".filter-derek">Derek</li>
-                            <li data-filter=".filter-flat-deck">Flat Deck</li>
-                            <li data-filter=".filter-dropside">Dropside</li>
-                            <li data-filter=".filter-tangki-trailer">Tangki Trailer</li>
-                            <li data-filter=".filter-repair-karoseri">Jasa Repair Karoseri</li>
-                            <li data-filter=".filter-pengecatan">Jasa Pengecatan</li>
+                        <!-- Dropside -->
+                        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                            <img src="assets/Foto Tambahan/685f3520a0f68e5774446974d101a34c.jpg"
+                                class="img-thumbnail border-0 mb-3" alt="Dropside" srcset="">
+                            <h3>Dropside</h3>
+                            <p>Dropside dirancang untuk kemudahan akses dan efisiensi dalam pengangkutan barang. Solusi
+                                tepat untuk berbagai
+                                kebutuhan transportasi industri.</p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="bi bi-check2"></i> <span>Desain akses mudah</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Kapasitas muatan fleksibel</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Tahan lama dan andal</span></li>
+                            </ul>
+                            <a id="wa-link" href="#" target="_blank" class="btn-get-features">Hubungi Sekarang</a>
+                        </div><!-- End feature item-->
 
-                        </ul><!-- End Portfolio Filters -->
+                        <!-- Fix Set -->
+                        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                            <img src="assets/Foto/IMG_1419.JPG" class="img-thumbnail border-0 mb-3" alt="Fix Set"
+                                srcset="">
+                            <h3>Fix Set</h3>
+                            <p>Fix Set menawarkan solusi pengangkutan yang stabil dan aman. Ideal untuk transportasi
+                                barang yang memerlukan
+                                penanganan khusus.</p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="bi bi-check2"></i> <span>Struktur stabil</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Keamanan terjamin</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Kapasitas muatan besar</span></li>
+                            </ul>
+                            <a id="wa-link" href="#" target="_blank" class="btn-get-features">Hubungi Sekarang</a>
+                        </div><!-- End feature item-->
 
-                        <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+                        <!-- Flat Deck -->
+                        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                            <img src="assets/Foto Tambahan/WhatsApp Image 2024-08-03 at 09.37.52_a0487495.jpg"
+                                class="img-thumbnail border-0 mb-3" alt="Flat Deck" srcset="">
+                            <h3>Flat Deck</h3>
+                            <p>Flat Deck memberikan fleksibilitas dalam pengangkutan barang berukuran besar dan berat.
+                                Cocok untuk berbagai
+                                kebutuhan transportasi industri.</p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="bi bi-check2"></i> <span>Permukaan datar untuk muatan besar</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Desain kuat dan tahan lama</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Mudah untuk bongkar muat</span></li>
+                            </ul>
+                            <a id="wa-link" href="#" target="_blank" class="btn-get-features">Hubungi Sekarang</a>
+                        </div><!-- End feature item-->
 
-                            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-self-loader">
-                                <div class="portfolio-content h-100">
-                                    <img src="assets/Foto/IMG_2908.JPG" class="img-fluid" alt="">
-                                    <div class="portfolio-info">
-                                        <h4>Self Loader</h4>
-                                        <a href="assets/Foto/IMG_2908.JPG" title="Self Loader"
-                                            data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
-                                                class="bi bi-zoom-in"></i></a>
-                                    </div>
-                                </div>
-                            </div>
+                        <!-- Low Bed -->
+                        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                            <img src="assets/Foto Tambahan/WhatsApp Image 2024-08-03 at 09.43.03_7a20d034.jpg"
+                                class="img-thumbnail border-0 mb-3" alt="Low Bed" srcset="">
+                            <h3>Low Bed</h3>
+                            <p>Low Bed dirancang untuk mengangkut alat berat dengan stabilitas dan keamanan tinggi.
+                                Ideal untuk berbagai
+                                kebutuhan transportasi berat.</p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="bi bi-check2"></i> <span>Stabilitas tinggi untuk muatan berat</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Struktur kokoh dan tahan lama</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Desain rendah untuk kemudahan akses</span></li>
+                            </ul>
+                            <a id="wa-link" href="#" target="_blank" class="btn-get-features">Hubungi Sekarang</a>
+                        </div><!-- End feature item-->
 
-                            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-low-bed">
-                                <div class="portfolio-content h-100">
-                                    <img src="assets/Foto Tambahan/WhatsApp Image 2024-08-03 at 09.43.03_7a20d034.jpg"
-                                        class="img-fluid" alt="">
-                                    <div class="portfolio-info">
-                                        <h4>Low Bed</h4>
-                                        <a href="assets/Foto Tambahan/WhatsApp Image 2024-08-03 at 09.43.03_7a20d034.jpg"
-                                            title="Low Bed" data-gallery="portfolio-gallery-app"
-                                            class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                                    </div>
-                                </div>
-                            </div>
+                        <!-- Crane -->
+                        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                            <img src="assets/Foto Tambahan/685f3520a0f68e5774446974d101a34c.jpg"
+                                class="img-thumbnail border-0 mb-3" alt="Crane" srcset="">
+                            <h3>Crane</h3>
+                            <p>Crane memberikan solusi pengangkatan dan pengangkutan yang efisien. Cocok untuk berbagai
+                                kebutuhan konstruksi dan
+                                industri.</p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="bi bi-check2"></i> <span>Kapabilitas angkat berat</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Desain kuat dan stabil</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Mudah dioperasikan</span></li>
+                            </ul>
+                            <a id="wa-link" href="#" target="_blank" class="btn-get-features">Hubungi Sekarang</a>
+                        </div><!-- End feature item-->
 
-                            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-derek">
-                                <div class="portfolio-content h-100">
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpFvInHDvxUxo-vCXDjOf71IZ02yGjqKyc9A&s"
-                                        class="img-fluid" alt="">
-                                    <div class="portfolio-info">
-                                        <h4>Derek</h4>
-                                        <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpFvInHDvxUxo-vCXDjOf71IZ02yGjqKyc9A&s"
-                                            title="Derek" data-gallery="portfolio-gallery-app"
-                                            class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                                    </div>
-                                </div>
-                            </div>
+                        <!-- Towing -->
+                        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="700">
+                            <img src="assets/Foto/IMG_2908.JPG" class="img-thumbnail border-0 mb-3" alt="Towing"
+                                srcset="">
+                            <h3>Towing</h3>
+                            <p>Towing dirancang untuk membantu pengangkutan kendaraan dengan efisiensi tinggi. Solusi
+                                tepat untuk berbagai
+                                kebutuhan darurat dan transportasi.</p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="bi bi-check2"></i> <span>Sistem towing efisien</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Struktur kuat dan tahan lama</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Desain praktis</span></li>
+                            </ul>
+                            <a id="wa-link" href="#" target="_blank" class="btn-get-features">Hubungi Sekarang</a>
+                        </div><!-- End feature item-->
 
-                            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-flat-deck">
-                                <div class="portfolio-content h-100">
-                                    <img src="assets/Foto Tambahan/WhatsApp Image 2024-08-03 at 09.37.52_a0487495.jpg"
-                                        class="img-fluid" alt="">
-                                    <div class="portfolio-info">
-                                        <h4>Flat Deck</h4>
-                                        <a href="assets/Foto Tambahan/WhatsApp Image 2024-08-03 at 09.37.52_a0487495.jpg"
-                                            title="Flat Deck" data-gallery="portfolio-gallery-app"
-                                            class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                                    </div>
-                                </div>
-                            </div>
+                        <!-- Box Container -->
+                        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="800">
+                            <img src="assets/Foto Tambahan/WhatsApp Image 2024-08-03 at 09.32.06_373f010f.jpg"
+                                class="img-thumbnail border-0 mb-3" alt="Box Container" srcset="">
+                            <h3>Box Container</h3>
+                            <p>Box Container memberikan perlindungan ekstra untuk barang-barang Anda selama
+                                pengangkutan. Ideal untuk berbagai
+                                kebutuhan penyimpanan dan distribusi.</p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="bi bi-check2"></i> <span>Keamanan tinggi</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Desain kuat dan tahan lama</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Kapasitas besar</span></li>
+                            </ul>
+                            <a id="wa-link" href="#" target="_blank" class="btn-get-features">Hubungi Sekarang</a>
+                        </div><!-- End feature item-->
 
-                            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-dropside">
-                                <div class="portfolio-content h-100">
-                                    <img src="assets/Foto Tambahan/685f3520a0f68e5774446974d101a34c.jpg"
-                                        class="img-fluid" alt="">
-                                    <div class="portfolio-info">
-                                        <h4>Dropside</h4>
-                                        <a href="assets/Foto Tambahan/685f3520a0f68e5774446974d101a34c.jpg"
-                                            title="Dropside" data-gallery="portfolio-gallery-app"
-                                            class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                            <img src="assets/Foto Tambahan/IMG_1812.JPG" class="img-thumbnail border-0 mb-3"
+                                alt="Wing Box" srcset="">
+                            <h3>Wing Box</h3>
+                            <p>Wing Box memberikan solusi terbaik untuk pengangkutan barang dengan efisiensi tinggi dan
+                                keamanan yang terjamin.
+                                Ideal untuk berbagai kebutuhan distribusi dan logistik.</p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="bi bi-check2"></i> <span>Muat dan bongkar barang dengan mudah</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Struktur kuat dan tahan lama</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Dapat diandalkan dalam berbagai kondisi
+                                        cuaca</span></li>
+                            </ul>
 
-                            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-tangki-trailer">
-                                <div class="portfolio-content h-100">
-                                    <img src="assets/Foto Tambahan/IMG_1889.JPG" class="img-fluid" alt="">
-                                    <div class="portfolio-info">
-                                        <h4>Tangki Trailer</h4>
-                                        <a href="assets/Foto Tambahan/IMG_1889.JPG" title="Tangki Trailer"
-                                            data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
-                                                class="bi bi-zoom-in"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-repair-karoseri">
-                                <div class="portfolio-content h-100">
-                                    <img src="assets/Foto/IMG_1439.JPG" class="img-fluid" alt="">
-                                    <div class="portfolio-info">
-                                        <h4>Jasa Repair Karoseri</h4>
-                                        <a href="assets/Foto/IMG_1439.JPG" title="Jasa Repair Karoseri"
-                                            data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
-                                                class="bi bi-zoom-in"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-pengecatan">
-                                <div class="portfolio-content h-100">
-                                    <img src="assets/Foto Tambahan/IMG_1812.JPG" class="img-fluid" alt="">
-                                    <div class="portfolio-info">
-                                        <h4>Jasa Pengecatan</h4>
-                                        <a href="assets/Foto Tambahan/IMG_1812.JPG" title="Jasa Pengecatan"
-                                            data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
-                                                class="bi bi-zoom-in"></i></a>
-                                    </div>
-                                </div>
-                            </div>
+                            <a id="wa-link" href="#" target="_blank" class="btn-get-features">Hubungi Sekarang</a>
+                        </div><!-- End feature item-->
 
 
-                            <!-- Traielers -->
-                            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-traieler">
-                                <div class="portfolio-content h-100">
-                                    <img src="assets/Foto Tambahan/Screenshot_2024-08-03_091445-removebg-preview.png"
-                                        class="img-fluid" alt="">
-                                    <div class="portfolio-info">
-                                        <h4>Traieler Truck</h4>
-                                        <a href="assets/Foto Tambahan/Screenshot_2024-08-03_091445-removebg-preview.png"
-                                            title="traieler Truk" data-gallery="portfolio-gallery-app"
-                                            class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                                    </div>
-                                </div>
-                            </div><!-- End Portfolio Item -->
+                        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                            <img src="assets/Foto Tambahan/Screenshot_2024-08-03_091445-removebg-preview.png"
+                                class="img-thumbnail border-0 mb-3" alt="Trailer" srcset="">
+                            <h3>Trailer</h3>
+                            <p>Solusi ideal untuk mengangkut beban berat dengan efisiensi dan keamanan. Dirancang untuk
+                                berbagai kebutuhan
+                                transportasi industri.</p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="bi bi-check2"></i> <span>Kapasitas muatan besar</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Struktur kuat dan tahan lama</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Dapat diandalkan dalam berbagai kondisi</span>
+                                </li>
+                            </ul>
 
-                            <!-- dump truck -->
-                            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-dump">
-                                <div class="portfolio-content h-100">
-                                    <img src="assets/Foto/IMG_1417.JPG" class="img-fluid" alt="">
-                                    <div class="portfolio-info">
-                                        <h4>Dump Truck</h4>
-                                        <a href="assets/Foto/IMG_1417.JPG" title="Dump Truk"
-                                            data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
-                                                class="bi bi-zoom-in"></i></a>
-                                    </div>
-                                </div>
-                            </div><!-- End Portfolio Item -->
+                            <a id="wa-link" href="#" target="_blank" class="btn-get-features">Hubungi Sekarang</a>
+                        </div><!-- End feature item-->
 
-                            <!-- Tanki -->
-                            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-tanki">
-                                <div class="portfolio-content h-100">
-                                    <img src="assets/Foto/IMG_0665.jpg" class="img-fluid" alt="">
-                                    <div class="portfolio-info">
-                                        <h4>Tanki</h4>
-                                        <a href="assets/Foto/IMG_0665.jpg" title="Tanki"
-                                            data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
-                                                class="bi bi-zoom-in"></i></a>
-                                    </div>
-                                </div>
-                            </div><!-- End Portfolio Item -->
 
-                            <!-- crane -->
-                            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-crane">
-                                <div class="portfolio-content h-100">
-                                    <img src="assets/Foto Tambahan/685f3520a0f68e5774446974d101a34c.jpg"
-                                        class="img-fluid" alt="">
-                                    <div class="portfolio-info">
-                                        <h4>Crane</h4>
-                                        <a href="assets/Foto Tambahan/685f3520a0f68e5774446974d101a34c.jpg"
-                                            title="crane" data-gallery="portfolio-gallery-app"
-                                            class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                                    </div>
-                                </div>
-                            </div><!-- End Portfolio Item -->
+                        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                            <img src="assets/Foto/IMG_0663.jpg" class="img-thumbnail border-0 mb-3" alt="Tangki"
+                                srcset="">
+                            <h3>Tangki</h3>
+                            <p>Dirancang untuk menyimpan dan mengangkut berbagai jenis cairan dengan aman. Solusi tepat
+                                untuk kebutuhan
+                                penyimpanan industri Anda.</p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="bi bi-check2"></i> <span>Material berkualitas tinggi</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Sistem keamanan terjamin</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Beragam kapasitas tersedia</span></li>
 
-                            <!-- wing -->
-                            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-wing">
-                                <div class="portfolio-content h-100">
-                                    <img src="assets/Foto Tambahan/IMG_1812.JPG" class="img-fluid" alt="">
-                                    <div class="portfolio-info">
-                                        <h4>Wing</h4>
-                                        <a href="assets/Foto Tambahan/IMG_1812.JPG" title="wing"
-                                            data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
-                                                class="bi bi-zoom-in"></i></a>
-                                    </div>
-                                </div>
-                            </div><!-- End Portfolio Item -->
+                                <a id="wa-link" href="#" target="_blank" class="btn-get-features">Hubungi Sekarang</a>
+                            </ul>
+                        </div><!-- End feature item-->
 
-                            <!-- box -->
-                            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-box">
-                                <div class="portfolio-content h-100">
-                                    <img src="assets/Foto Tambahan/WhatsApp Image 2024-08-03 at 09.32.06_373f010f.jpg"
-                                        class="img-fluid" alt="">
-                                    <div class="portfolio-info">
-                                        <h4>Box Container</h4>
-                                        <a href="assets/Foto Tambahan/WhatsApp Image 2024-08-03 at 09.32.06_373f010f.jpg"
-                                            title="box" data-gallery="portfolio-gallery-app"
-                                            class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                                    </div>
-                                </div>
-                            </div><!-- End Portfolio Item -->
 
-                        </div><!-- End Portfolio Container -->
+                        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                            <img src="assets/Foto/IMG_1419.JPG" class="img-thumbnail border-0 mb-3" alt="Dump"
+                                srcset="">
+                            <h3>Dump</h3>
+                            <p>Sempurna untuk mengangkut material konstruksi dengan efisien. Desain yang kokoh dan tahan
+                                lama untuk pekerjaan
+                                berat Anda.</p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="bi bi-check2"></i> <span>Mudah digunakan dan dipelihara</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Kapasitas besar untuk material berat</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Struktur yang tahan lama</span></li>
+
+                                <a id="wa-link" href="#" target="_blank" class="btn-get-features">Hubungi Sekarang</a>
+                            </ul>
+                        </div><!-- End feature item-->
+
+
+                        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                            <img src="assets/Foto/IMG_2908.JPG" class="img-thumbnail border-0 mb-3" alt="Self Loader"
+                                srcset="">
+                            <h3>Self Loader</h3>
+                            <p>Mudah mengangkut dan memuat alat berat dengan desain yang efisien dan kuat. Solusi
+                                terbaik untuk kebutuhan
+                                transportasi alat berat Anda.</p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="bi bi-check2"></i> <span>Desain praktis dan efisien</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Tahan lama dan kuat</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Mempermudah pemuatan alat berat</span></li>
+
+                                <a id="wa-link" href="#" target="_blank" class="btn-get-features">Hubungi Sekarang</a>
+                            </ul>
+                        </div><!-- End feature item-->
+
 
                     </div>
 
                 </div>
 
-            </section><!-- /Projects Section -->
+            </section><!-- /Features Cards Section -->
 
         </main>
 
@@ -318,7 +335,7 @@
                             <p>JL. RAYA JABON NO 6</p>
                             <p>JOKODAYO JABON KEC, MOJOANYAR, MOJOKERTO JAWATIMUR</p>
                             <p class="mt-3"><strong>Phone:</strong> <span>0812-2222-8543</span></p>
-                            <p><strong>Email:</strong> <span>mandirikerjaabadi@gmail.com</span></p>
+                            <p><strong>Email:</strong> <span>karoserimandirikerjaabadi@gmail.com</span></p>
                         </div>
                         <div class="social-links d-flex mt-4">
                             <a href="https://www.tiktok.com/@karoseri_mka?_t=8oXG6z4FaFt&_r=1" class="me-2"><i
@@ -338,15 +355,10 @@
                             <li><a href="#">Layanan</a></li>
                             <li><a href="#">Proyek</a></li>
                             <li><a href="#">Artikel</a></li>
+                            <li><a href="#">Galeri</a></li>
                             <li><a href="#">Kontak</a></li>
-                            <li><a href="#">Pengajuan</a></li>
+                            <li><a href="#">Purna Jual</a></li>
                         </ul>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 footer-newsletter">
-                        <h4>Newsletter</h4>
-                        <p>Berlangganan newsletter kami untuk mendapatkan update terbaru tentang layanan dan proyek
-                            kami.</p>
                     </div>
 
                     <div class="col-lg-3 col-md-6 footer-hours">
@@ -371,6 +383,7 @@
             </div>
 
         </footer>
+
         <!-- Scroll Top -->
         <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
                 class="bi bi-arrow-up-short"></i></a>
